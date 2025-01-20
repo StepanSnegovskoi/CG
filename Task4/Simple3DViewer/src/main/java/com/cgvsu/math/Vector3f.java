@@ -44,11 +44,11 @@ public class Vector3f {
         return this.x * vector3f.x + this.y * vector3f.y + this.z * vector3f.z;
     }
 
-    public Vector3f cross(final Vector3f v) {
+    public Vector3f cross(final Vector3f vector3f) {
         return new Vector3f(
-                this.y * v.z - this.z * v.y,
-                - this.z * v.x + this.x * v.z,
-                this.x * v.y - this.y * v.x
+                this.y * vector3f.z - this.z * vector3f.y,
+                - this.z * vector3f.x + this.x * vector3f.z,
+                this.x * vector3f.y - this.y * vector3f.x
         );
     }
 
