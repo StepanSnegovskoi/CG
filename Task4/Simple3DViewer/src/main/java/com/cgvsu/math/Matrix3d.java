@@ -3,14 +3,14 @@ package com.cgvsu.math;
 public class Matrix3d {
     private float[][] matrix;
 
-    public Matrix3d(float[][] matrix) {
+    public Matrix3d(final float[][] matrix) {
         if (matrix.length != 3 || matrix[0].length != 3) {
             throw new IllegalArgumentException("Matrix must be 3x3.");
         }
         this.matrix = matrix;
     }
 
-    public Matrix3d add(Matrix3d matrix3d) {
+    public Matrix3d add(final Matrix3d matrix3d) {
         float[][] result = new float[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -20,7 +20,7 @@ public class Matrix3d {
         return new Matrix3d(result);
     }
 
-    public Matrix3d subtract(Matrix3d matrix3d) {
+    public Matrix3d subtract(final Matrix3d matrix3d) {
         float[][] result = new float[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -30,7 +30,7 @@ public class Matrix3d {
         return new Matrix3d(result);
     }
 
-    public Vector3f multiply(Vector3f vector3f) {
+    public Vector3f multiply(final Vector3f vector3f) {
         float x = matrix[0][0] * vector3f.getX() + matrix[0][1] * vector3f.getY() + matrix[0][2] * vector3f.getZ();
         float y = matrix[1][0] * vector3f.getX() + matrix[1][1] * vector3f.getY() + matrix[1][2] * vector3f.getZ();
         float z = matrix[2][0] * vector3f.getX() + matrix[2][1] * vector3f.getY() + matrix[2][2] * vector3f.getZ();
@@ -53,7 +53,7 @@ public class Matrix3d {
         });
     }
 
-    public Matrix3d multiply(Matrix3d matrix3d) {
+    public Matrix3d multiply(final Matrix3d matrix3d) {
         float[][] result = new float[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
@@ -76,7 +76,7 @@ public class Matrix3d {
         return new Matrix3d(result);
     }
 
-    public float get(int row, int column) {
+    public float get(final int row,final int column) {
         if (row < 3 && column < 3) {
             return matrix[row][column];
         } else {
@@ -84,13 +84,13 @@ public class Matrix3d {
         }
     }
 
-    public void set(int row, int column, float value) {
+    public void set(final int row, final int column, final float value) {
         if (row < 3 && column < 3) {
             this.matrix[row][column] = value;
         }
     }
 
-    public void setMatrix(float[][] matrix) {
+    public void setMatrix(final float[][] matrix) {
         if (matrix.length == 3 &&
                 matrix[0].length == 3 &&
                 matrix[1].length == 3 &&
