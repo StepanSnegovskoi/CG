@@ -1,5 +1,8 @@
 package com.cgvsu.math;
 
+/**
+ * Используются векторы столбцы
+ */
 public class Matrix3d {
     private float[][] matrix;
 
