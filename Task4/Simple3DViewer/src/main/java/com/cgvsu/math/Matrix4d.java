@@ -1,8 +1,5 @@
 package com.cgvsu.math;
 
-/**
- * Используются векторы столбцы
- */
 public class Matrix4d {
     private float[][] matrix;
 
