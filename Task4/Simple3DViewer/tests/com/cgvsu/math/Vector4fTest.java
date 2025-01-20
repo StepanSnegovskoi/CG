@@ -81,7 +81,7 @@ class Vector4fTest {
     public void scalarMultiply() {
         Vector4f v1 = new Vector4f(1, 2, 3, 4);
         Vector4f v2 = new Vector4f(4, 5, 6, 7);
-        float result = v1.scalarMultiply(v2);
+        float result = v1.dot(v2);
         assertEquals(60, result);
     }
 

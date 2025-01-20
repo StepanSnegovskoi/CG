@@ -76,7 +76,7 @@ class Vector3fTest {
     public void scalarMultiply() {
         Vector3f v1 = new Vector3f(1, 2, 3);
         Vector3f v2 = new Vector3f(4, 5, 6);
-        double result = v1.scalarMultiply(v2);
+        double result = v1.dot(v2);
         assertEquals(32, result);
     }
 

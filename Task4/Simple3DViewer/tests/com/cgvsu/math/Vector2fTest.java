@@ -69,6 +69,6 @@ class Vector2fTest {
     public void scalarMultiply() {
         Vector2f v1 = new Vector2f(2, 3);
         Vector2f v2 = new Vector2f(4, 5);
-        assertEquals(23, v1.scalarMultiply(v2), 0.0001);
+        assertEquals(23, v1.dot(v2), 0.0001);
     }
 }
