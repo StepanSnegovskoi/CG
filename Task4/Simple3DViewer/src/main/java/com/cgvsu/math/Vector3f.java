@@ -40,7 +40,7 @@ public class Vector3f {
         return new Vector3f(x / len, y / len, z / len);
     }
 
-    public double scalarMultiply(Vector3f vector3f) {
+    public float scalarMultiply(Vector3f vector3f) {
         return this.x * vector3f.x + this.y * vector3f.y + this.z * vector3f.z;
     }
 
@@ -52,15 +52,15 @@ public class Vector3f {
         );
     }
 
-    public double getX() {
+    public float getX() {
         return x;
     }
 
-    public double getY() {
+    public float getY() {
         return y;
     }
 
-    public double getZ() {
+    public float getZ() {
         return z;
     }
 
