@@ -34,7 +34,7 @@ public class Vector2f {
         return new Vector2f(x / len, y / len);
     }
 
-    public double scalarMultiply(final Vector2f vector2f) {
+    public double dot(final Vector2f vector2f) {
         return this.x * vector2f.x + this.y * vector2f.y;
     }
 

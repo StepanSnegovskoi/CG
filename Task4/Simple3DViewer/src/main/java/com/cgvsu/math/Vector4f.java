@@ -36,7 +36,7 @@ public class Vector4f {
         return new Vector4f(x / len, y / len, z / len, w / len);
     }
 
-    public float scalarMultiply(final Vector4f vector4f) {
+    public float dot(final Vector4f vector4f) {
         return this.x * vector4f.x + this.y * vector4f.y + this.z * vector4f.z + this.w * vector4f.w;
     }
 
