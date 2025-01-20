@@ -21,7 +21,7 @@ public class RenderEngine {
         Matrix4d viewMatrix = camera.getViewMatrix();
         Matrix4d projectionMatrix = camera.getProjectionMatrix();
 
-        Matrix4d modelViewProjectionMatrix = modelMatrix.multiply(viewMatrix).multiply(projectionMatrix);
+        Matrix4d modelViewProjectionMatrix = projectionMatrix.multiply(viewMatrix).multiply(modelMatrix);
 
         final int nPolygons = mesh.polygons.size();
         for (int polygonInd = 0; polygonInd < nPolygons; ++polygonInd) {
