@@ -97,7 +97,6 @@ public class Matrix3d {
                 matrix[2].length == 3) {
             this.matrix = matrix;
         }
-
     }
 
     public float[][] getMatrix() {

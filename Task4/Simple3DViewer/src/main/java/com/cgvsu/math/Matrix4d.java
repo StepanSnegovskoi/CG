@@ -91,7 +91,6 @@ public class Matrix4d {
                 matrix[3].length == 4) {
             this.matrix = matrix;
         }
-
     }
 
     public Matrix4d transpose() {
