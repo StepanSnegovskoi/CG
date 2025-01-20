@@ -84,6 +84,12 @@ public class Matrix3d {
         }
     }
 
+    public void set(int row, int column, float value) {
+        if (row < 3 && column < 3) {
+            this.matrix[row][column] = value;
+        }
+    }
+
     public void setMatrix(float[][] matrix) {
         if (matrix.length == 3 &&
                 matrix[0].length == 3 &&
