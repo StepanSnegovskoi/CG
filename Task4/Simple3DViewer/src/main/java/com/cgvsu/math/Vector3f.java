@@ -2,7 +2,7 @@ package com.cgvsu.math;
 
 public class Vector3f {
     public final static float EPS = 1e-7f;
-    public float x, y, z;
+    private float x, y, z;
 
     public Vector3f(final float x, final float y, final float z) {
         this.x = x;
