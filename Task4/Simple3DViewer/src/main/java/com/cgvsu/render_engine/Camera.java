@@ -1,8 +1,19 @@
 package com.cgvsu.render_engine;
-import javax.vecmath.Vector3f;
+
 import javax.vecmath.Matrix4f;
+import javax.vecmath.Vector3f;
 
 public class Camera {
+
+    private Vector3f position;
+    private Vector3f target;
+    private float fov;
+    private float aspectRatio;
+    private float nearPlane;
+    private float farPlane;
+    private boolean isActive;
+    private float yaw = 0.0f;
+    private float pitch = 0.0f;
 
     public Camera(
             final Vector3f position,
@@ -10,13 +21,16 @@ public class Camera {
             final float fov,
             final float aspectRatio,
             final float nearPlane,
-            final float farPlane) {
+            final float farPlane,
+            final boolean isActive
+    ) {
         this.position = position;
         this.target = target;
         this.fov = fov;
         this.aspectRatio = aspectRatio;
         this.nearPlane = nearPlane;
         this.farPlane = farPlane;
+        this.isActive = isActive;
     }
 
     public void setPosition(final Vector3f position) {
@@ -31,6 +45,10 @@ public class Camera {
         this.aspectRatio = aspectRatio;
     }
 
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
     public Vector3f getPosition() {
         return position;
     }
@@ -39,12 +57,16 @@ public class Camera {
         return target;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
+
     public void movePosition(final Vector3f translation) {
         this.position.add(translation);
     }
 
     public void moveTarget(final Vector3f translation) {
-        this.target.add(target);
+        this.target.add(translation);
     }
 
     Matrix4f getViewMatrix() {
@@ -55,10 +77,4 @@ public class Camera {
         return GraphicConveyor.perspective(fov, aspectRatio, nearPlane, farPlane);
     }
 
-    private Vector3f position;
-    private Vector3f target;
-    private float fov;
-    private float aspectRatio;
-    private float nearPlane;
-    private float farPlane;
 }
