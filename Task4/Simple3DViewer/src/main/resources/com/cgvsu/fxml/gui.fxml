@@ -38,7 +38,7 @@
                                 <Text layoutX="168.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цвет полигонов" />
                                 <TextField fx:id="deleteVertex" layoutX="30.0" layoutY="909.0" prefHeight="25.0" prefWidth="288.0" promptText="1 4 20 22" />
                                 <Button fx:id="deleteVertexButton" layoutX="347.0" layoutY="909.0" mnemonicParsing="false" onMouseClicked="#deleteVertexAction" text="Удалить" />
-                                <Text layoutX="30.0" layoutY="876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ввидите список индексов удаляемых вершин через пробел" />
+                                <Text layoutX="30.0" layoutY="876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите список индексов удаляемых вершин через пробел" />
                                   <ScrollPane layoutX="11.0" layoutY="518.0" prefHeight="300.0" prefWidth="481.0">
                                       <content>
                                           <AnchorPane fx:id="cameraPane" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="491.0">
