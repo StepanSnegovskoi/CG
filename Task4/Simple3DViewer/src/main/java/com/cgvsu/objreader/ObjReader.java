@@ -57,7 +57,7 @@ public class ObjReader {
 	protected static Vector3f parseVertex(final List<String> wordsInLine, final int lineInd) {
 		try {
 			if (wordsInLine.size() < 3) {
-				throw new ObjReaderException("Слишком мало аргументов вершин. Ожидается как минимум 3 (x, y, z).", lineInd);
+				throw new ObjReaderException("Too few vertex arguments.", lineInd);
 			}
 			float x = Float.parseFloat(wordsInLine.get(0));
 			float y = Float.parseFloat(wordsInLine.get(1));
